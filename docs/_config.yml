@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+title: Check TODOs
+description: |
+	Checks for any added or modified todos in a Pull Request.
+	This helps developers add TODOs to their code and commit them freely, but be sure that they're resolved before the Pull Request is merged.
