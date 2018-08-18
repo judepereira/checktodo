@@ -1,4 +1,4 @@
 theme: jekyll-theme-minimal
-title: //
+title: Home
 logo: logo.png
 description: A GitHub app which checks for any added TODOs in a Pull Request.
