@@ -1,4 +1,4 @@
-# Check TODO
+# Home
 A GitHub app which automatically adds a check which searches for new or modified TODOs in your Pull Requests once installed.
 
 ## Installation
