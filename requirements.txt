@@ -1,4 +1,4 @@
-requests==2.19.1
+requests==2.20.0
 PyJWT==1.6.4
 cryptography==2.3.1
 flask==1.0.2
