@@ -83,7 +83,7 @@ def checktodo_main():
             elif current_file is not None \
                     and current_pos is not None \
                     and line.startswith('+'):
-                if re.match(r'[^\w\d]todo[^\w\d]', line.lower()):
+                if re.match(r'[^\w\d]todo(?![\w\d])', line.lower()):
                     added.append({
                         'line': current_pos,
                         'file': current_file,
