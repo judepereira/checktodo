@@ -40,7 +40,9 @@ promotions:
     parameters:
       env_vars:
         - required: true
-          options: []
+          options:
+            - eu1-staging-1
+            - eu1-staging-2
           default_value: ''
           description: ''
           name: Stack
