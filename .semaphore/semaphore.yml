@@ -11,12 +11,15 @@ blocks:
         - name: Checkout
           commands:
             - checkout
+    dependencies: []
   - name: Compile
     task:
       jobs:
         - name: Compile
           commands:
             - echo "Compiled!"
+    dependencies:
+      - Checkout
   - name: Build Image
     task:
       jobs:
@@ -26,6 +29,16 @@ blocks:
         - name: Build x86_64
           commands:
             - echo "x86 built!"
+    dependencies:
+      - Compile
+  - name: Message Slack
+    dependencies:
+      - Build Image
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - echo "Slack Messaged!"
 promotions:
   - name: Deploy to eu1-staging-1
     pipeline_file: pipeline_2.yml
@@ -48,3 +61,5 @@ promotions:
           default_value: ''
           description: ''
           name: Stack
+  - name: Promotion 4
+    pipeline_file: pipeline_5.yml
