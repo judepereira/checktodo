@@ -37,3 +37,10 @@ promotions:
       when: branch = 'master' AND result = 'passed'
   - name: Deploy Manually
     pipeline_file: pipeline_4.yml
+    parameters:
+      env_vars:
+        - required: true
+          options: []
+          default_value: ''
+          description: ''
+          name: Stack
