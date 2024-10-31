@@ -27,6 +27,9 @@ blocks:
           commands:
             - echo "x86 built!"
 promotions:
-  - name: Promote to eu1-staging-1
+  - name: Deploy to eu1-staging-1
     pipeline_file: pipeline_2.yml
     deployment_target: eu1-staging-1
+  - name: Deploy to eu1-staging-2
+    pipeline_file: pipeline_3.yml
+    deployment_target: eu1-staging-2
