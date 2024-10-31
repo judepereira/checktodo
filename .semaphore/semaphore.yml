@@ -5,18 +5,27 @@ agent:
     type: f1-standard-2
     os_image: ubuntu2204
 blocks:
-  - name: 'Block #1'
+  - name: Checkout
     task:
       jobs:
         - name: Checkout
           commands:
             - checkout
+  - name: Compile
+    task:
+      jobs:
         - name: Compile
           commands:
             - echo "Compiled!"
-        - name: Build Image
+  - name: Build Image
+    task:
+      jobs:
+        - name: Build arm64
           commands:
-            - echo "Image built!"
+            - echo "arm64 built!"
+        - name: Build x86_64
+          commands:
+            - echo "x86 built!"
 promotions:
   - name: Promote to eu1-staging-1
     pipeline_file: pipeline_2.yml
