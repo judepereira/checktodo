@@ -35,6 +35,7 @@ promotions:
     deployment_target: eu1-staging-2
     auto_promote:
       when: branch = 'master' AND result = 'passed'
+      delay: 10m
   - name: Deploy Manually
     pipeline_file: pipeline_4.yml
     parameters:
