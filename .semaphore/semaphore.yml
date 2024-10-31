@@ -8,9 +8,15 @@ blocks:
   - name: 'Block #1'
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Checkout
           commands:
             - checkout
+        - name: Compile
+          commands:
+            - echo "Compiled!"
+        - name: Build Image
+          commands:
+            - echo "Image built!"
 promotions:
   - name: Promote to eu1-staging-1
     pipeline_file: pipeline_2.yml
