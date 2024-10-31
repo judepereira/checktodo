@@ -50,6 +50,22 @@ promotions:
     deployment_target: eu1-staging-2
     auto_promote:
       when: result = 'passed'
+    parameters:
+      env_vars:
+        - required: false
+          options: []
+          default_value: ''
+          description: ''
+          name: TTL
+        - required: true
+          options:
+            - Option 4
+            - Cat
+            - Dog
+            - Mouse
+          default_value: ''
+          description: ''
+          name: Example Select
   - name: Deploy Manually
     pipeline_file: pipeline_4.yml
     parameters:
