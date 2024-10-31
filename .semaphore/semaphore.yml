@@ -1,0 +1,17 @@
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
+    type: f1-standard-2
+    os_image: ubuntu2204
+blocks:
+  - name: 'Block #1'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - checkout
+promotions:
+  - name: Promote to eu1-staging-1
+    pipeline_file: pipeline_2.yml
+    deployment_target: eu1-staging-1
