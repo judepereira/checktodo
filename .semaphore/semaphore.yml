@@ -30,11 +30,13 @@ promotions:
   - name: Deploy to eu1-staging-1
     pipeline_file: pipeline_2.yml
     deployment_target: eu1-staging-1
+    auto_promote:
+      when: result = 'passed'
   - name: Deploy to eu1-staging-2
     pipeline_file: pipeline_3.yml
     deployment_target: eu1-staging-2
     auto_promote:
-      when: branch = 'master' AND result = 'passed'
+      when: result = 'passed'
   - name: Deploy Manually
     pipeline_file: pipeline_4.yml
     parameters:
