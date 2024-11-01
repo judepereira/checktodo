@@ -1,5 +1,5 @@
 version: v1.0
-name: Pipeline 7
+name: 'Deploy on ${{parameters.Stack}}'
 agent:
   machine:
     type: e1-standard-2
