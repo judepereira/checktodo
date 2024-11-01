@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: Discover stacks
           commands:
-            - 'for i in {1..10}; do curl -H "Authorization: Token $API_TOKEN" -d "name=Deploy&pipeline_id=$SEMAPHORE_PIPELINE_ID&Stack=us1-staging-$i" -X POST  "https://clevertap.semaphoreci.com/api/v1alpha/promotions"; done'
+            - 'for i in {1..10}; do curl -H "Authorization: Token $API_TOKEN" -d "name=Deploy&pipeline_id=$SEMAPHORE_PIPELINE_ID&override=true&Stack=us1-staging-$i" -X POST  "https://clevertap.semaphoreci.com/api/v1alpha/promotions"; done'
       secrets:
         - name: API_TOKEN
 promotions:
