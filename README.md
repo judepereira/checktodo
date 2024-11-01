@@ -1,7 +1,6 @@
 # Check TODOs
 A GitHub app which automatically adds a check which searches for new or modified TODOs in your Pull Requests once installed.
 
-
 ## Installation
 Head over to the app in the [GitHub Marketplace](https://github.com/apps/check-todo) to install this app.
 
