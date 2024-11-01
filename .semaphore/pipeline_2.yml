@@ -5,12 +5,6 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: Wait for approval
-    task:
-      jobs:
-        - name: Waiting...
-          commands:
-            - echo "Approved!"
   - name: Deploy
     task:
       jobs:
