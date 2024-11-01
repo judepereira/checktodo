@@ -47,13 +47,11 @@ blocks:
       - Compile
     task:
       jobs:
-        - name: Create HTML Report
+        - name: Create & push HTML Report
           commands:
             - mkdir -p report
             - echo "<h1>Hello world (a)</h1>" >> report/a.html
             - echo "<h1>Hello world (b)</h1>" >> report/b.html
-        - name: Push HTML Report
-          commands:
             - artifact push html_reports report
 promotions:
   - name: Deploy to eu1-staging-1
