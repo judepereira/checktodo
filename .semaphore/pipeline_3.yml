@@ -5,9 +5,21 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: 'Block #1'
+  - name: Discover us1-stacks
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Discover stacks
           commands:
-            - echo "job 1"
+            - 'for i in {1..10}; do curl -H "Authorization: Token $API_TOKEN" -d "name=Deploy&pipeline_id=$SEMAPHORE_PIPELINE_ID&Stack=us1-staging-$i" -X POST  "https://clevertap.semaphoreci.com/api/v1alpha/promotions"; done'
+      secrets:
+        - name: API_TOKEN
+promotions:
+  - name: Deploy
+    pipeline_file: pipeline_7.yml
+    parameters:
+      env_vars:
+        - required: true
+          options: []
+          default_value: ''
+          description: ''
+          name: Stack
