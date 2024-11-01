@@ -11,6 +11,9 @@ blocks:
         - name: Checkout
           commands:
             - checkout
+      env_vars:
+        - name: FOO_1
+          value: ''
     dependencies: []
   - name: Compile
     task:
