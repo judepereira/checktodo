@@ -5,9 +5,15 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: 'Block #1'
+  - name: Wait for approval
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Waiting...
           commands:
-            - echo "job 1"
+            - echo "Approved!"
+  - name: Deploy
+    task:
+      jobs:
+        - name: Deploy
+          commands:
+            - echo "Deployed!"

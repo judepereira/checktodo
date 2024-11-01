@@ -46,10 +46,15 @@ promotions:
   - name: Deploy to eu1-staging-1
     pipeline_file: pipeline_2.yml
     deployment_target: eu1-staging-1
+    parameters:
+    	env_vars:
+     		- required: true
+          name: Stack
+        	default_value: eu1-staging-1
     auto_promote:
       when: result = 'passed'
   - name: Deploy to eu1-staging-2
-    pipeline_file: pipeline_3.yml
+    pipeline_file: pipeline_2.yml
     deployment_target: eu1-staging-2
     auto_promote:
       when: result = 'passed'
@@ -70,7 +75,7 @@ promotions:
           description: ''
           name: Example Select
   - name: Deploy Manually
-    pipeline_file: pipeline_4.yml
+    pipeline_file: pipeline_2.yml
     parameters:
       env_vars:
         - required: true
@@ -81,4 +86,4 @@ promotions:
           description: ''
           name: Stack
   - name: Promotion 4
-    pipeline_file: pipeline_5.yml
+    pipeline_file: pipeline_2.yml
