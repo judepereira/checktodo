@@ -50,6 +50,8 @@ promotions:
       - required: true
         name: Stack
         default_value: eu1-staging-1
+        description: ''
+        options: []
     auto_promote:
       when: result = 'passed'
   - name: Deploy to eu1-staging-2
