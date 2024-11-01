@@ -33,7 +33,7 @@ blocks:
           commands:
             - echo "x86 built!"
     dependencies:
-      - Compile
+      - Run Tests
   - name: Message Slack
     dependencies:
       - Build Image
@@ -42,6 +42,19 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo "Slack Messaged!"
+  - name: Run Tests
+    dependencies:
+      - Compile
+    task:
+      jobs:
+        - name: Create HTML Report
+          commands:
+            - mkdir -p report
+            - echo "<h1>Hello world (a)</h1>" >> report/a.html
+            - echo "<h1>Hello world (b)</h1>" >> report/b.html
+        - name: Push HTML Report
+          commands:
+            - artifact push html_reports report
 promotions:
   - name: Deploy to eu1-staging-1
     pipeline_file: pipeline_2.yml
