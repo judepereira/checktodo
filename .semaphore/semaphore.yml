@@ -52,7 +52,7 @@ blocks:
             - mkdir -p report
             - echo "<h1>Hello world (a)</h1><br><a href='b.html'>go to b.html</a>" >> report/a.html
             - echo "<h1>Hello world (b)</h1><br><a href='a.html'>go to a.html</a>" >> report/b.html
-            - artifact push job report
+            - artifact push workflow report
 promotions:
   - name: Deploy to eu1-staging-1
     pipeline_file: pipeline_2.yml
