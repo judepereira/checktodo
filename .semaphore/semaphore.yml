@@ -98,5 +98,12 @@ promotions:
           default_value: ''
           description: ''
           name: Stack
-  - name: Promotion 4
+  - name: Approve this release
     pipeline_file: pipeline_2.yml
+    parameters:
+      env_vars:
+        - required: true
+          options: []
+          default_value: APPROVAL
+          description: ''
+          name: ROLE
