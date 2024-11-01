@@ -46,12 +46,13 @@ promotions:
   - name: Deploy to eu1-staging-1
     pipeline_file: pipeline_2.yml
     deployment_target: eu1-staging-1
-    env_vars:
-      - required: true
-        name: Stack
-        default_value: eu1-staging-1
-        description: ''
-        options: []
+    parameters:
+      env_vars:
+        - required: true
+          name: Stack
+          default_value: eu1-staging-1
+          description: ''
+          options: []
     auto_promote:
       when: result = 'passed'
   - name: Deploy to eu1-staging-2
