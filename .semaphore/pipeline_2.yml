@@ -11,3 +11,6 @@ blocks:
         - name: Deploy
           commands:
             - echo "Deployed!"
+      prologue:
+        commands:
+          - exit 1
