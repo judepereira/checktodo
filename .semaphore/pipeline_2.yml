@@ -14,3 +14,6 @@ blocks:
       prologue:
         commands:
           - exit 1
+promotions:
+  - name: Promote to eu1-production-1
+    pipeline_file: pipeline_6.yml
