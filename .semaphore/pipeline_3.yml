@@ -23,4 +23,3 @@ promotions:
           default_value: ''
           description: ''
           name: Stack
-    deployment_target: eu1-staging-1

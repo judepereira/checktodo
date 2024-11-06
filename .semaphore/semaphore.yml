@@ -39,7 +39,7 @@ blocks:
       - Build Image
     task:
       jobs:
-        - name: 'Job #1'
+        - name: echo
           commands:
             - echo "Slack Messaged!"
   - name: Run Tests
