@@ -11,6 +11,7 @@ blocks:
         - name: Checkout
           commands:
             - checkout
+            - echo hello
       env_vars:
         - name: FOO_1
           value: ''
